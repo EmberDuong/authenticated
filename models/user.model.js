@@ -19,7 +19,11 @@ const UserSchema = new Schema({
         type: 'string',
         required: true,
         unique: true
-    }
+    },
+    refreshToken: {
+        type: 'string',
+        required: false
+    },
 })
 
 module.exports = mongoose.model("User", UserSchema)
